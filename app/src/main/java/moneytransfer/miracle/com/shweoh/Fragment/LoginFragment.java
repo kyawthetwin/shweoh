@@ -9,11 +9,13 @@ import android.view.ViewGroup;
 import moneytransfer.miracle.com.shweoh.R;
 
 public class LoginFragment extends Fragment {
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Get the view from fragmenttab2.xml
         View view = inflater.inflate(R.layout.fragment_login, container, false);
+
         return view;
     }
 
@@ -21,5 +23,8 @@ public class LoginFragment extends Fragment {
     public void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
         setUserVisibleHint(true);
+
+
+
     }
 }

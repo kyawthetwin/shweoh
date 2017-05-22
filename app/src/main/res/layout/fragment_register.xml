@@ -2,18 +2,42 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:gravity="center"
     tools:context="moneytransfer.miracle.com.shweoh.Fragment.RegisterFragment">
 
     <EditText
+        android:hint="Enter Your Name"
+        android:id="@+id/signup_username_edt"
         android:layout_width="300sp"
         android:layout_height="70sp" />
 
     <EditText
+        android:hint="Enter Your Password"
+        android:layout_below="@id/signup_username_edt"
+        android:id="@+id/signup_password_edt"
         android:layout_width="300sp"
         android:layout_height="70sp" />
     <EditText
+        android:hint="Enter Your Email"
+        android:layout_below="@id/signup_password_edt"
+        android:id="@+id/signup_email_edt"
         android:layout_width="300sp"
         android:layout_height="70sp" />
+    <Button
+        android:id="@+id/signup_confirm_btn"
+        android:layout_below="@id/signup_email_edt"
+        android:layout_width="200sp"
+        android:layout_marginLeft="53sp"
+        android:layout_height="wrap_content"
+        android:text="@string/Confirm"/>
+
+    <Button
+        android:layout_below="@id/signup_confirm_btn"
+        android:layout_width="200sp"
+        android:layout_marginLeft="53sp"
+        android:layout_height="wrap_content"
+        android:text="login with fb"/>
 
 
 
