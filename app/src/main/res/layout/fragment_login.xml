@@ -24,6 +24,7 @@
         android:layout_height="55sp"
         android:background="@color/colorAccent"/>
     <Button
+        android:id="@+id/login"
         android:layout_marginTop="30sp"
         android:layout_marginLeft="50sp"
         android:background="@color/colorPrimaryDark"
