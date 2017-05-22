@@ -1,0 +1,35 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:gravity="center"
+    tools:context="moneytransfer.miracle.com.shweoh.Fragment.LoginFragment">
+
+    <EditText
+        android:id="@+id/username_edt"
+        android:layout_width="300sp"
+        android:layout_height="55sp"
+        android:hint="@string/USERNAME"
+        android:gravity="center"
+        android:background="@color/colorAccent"/>
+
+    <EditText
+        android:gravity="center"
+        android:layout_marginTop="30sp"
+        android:layout_below="@+id/username_edt"
+        android:id="@+id/password_edt"
+        android:layout_width="300sp"
+        android:hint="@string/PASSWORD"
+        android:layout_height="55sp"
+        android:background="@color/colorAccent"/>
+    <Button
+        android:layout_marginTop="30sp"
+        android:layout_marginLeft="50sp"
+        android:background="@color/colorPrimaryDark"
+        android:layout_below="@id/password_edt"
+        android:layout_width="200sp"
+        android:text="@string/LOGIN"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>
