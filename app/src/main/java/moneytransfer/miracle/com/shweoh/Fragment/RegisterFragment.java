@@ -21,6 +21,14 @@ public class RegisterFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Get the view from fragmenttab2.xml
         View view = inflater.inflate(R.layout.fragment_register, container, false);
+        Confirm = (Button) view.findViewById(R.id.signup_confirm_btn);
+        Confirm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getActivity(), MainActivity.class);
+                startActivity(i);
+            }
+        });
         return view;
     }
 
