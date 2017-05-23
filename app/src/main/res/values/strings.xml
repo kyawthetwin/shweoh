@@ -12,6 +12,9 @@
     <string name="nav_item_home">HOME</string>
     <string name="nav_item_friends">FRIEND</string>
     <string name="nav_item_notifications">NOTIFICATIONS</string>
+    <string name="ham_english">English</string>
+    <string name="ham_burmese">Burmese</string>
+    <string name="ham_package">Package</string>
 
     <string-array name="nav_drawer_labels">
         <item>@string/nav_item_home</item>

@@ -5,8 +5,6 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
 import moneytransfer.miracle.com.shweoh.Fragment.CourseFragment;
-import moneytransfer.miracle.com.shweoh.Fragment.LoginFragment;
-import moneytransfer.miracle.com.shweoh.Fragment.RegisterFragment;
 import moneytransfer.miracle.com.shweoh.Fragment.TutorialFragment;
 
 /**
@@ -25,10 +23,10 @@ public class MainPagerAdapter extends FragmentPagerAdapter {
 
         switch (position) {
             case 0:
-                CourseFragment tab1 = new CourseFragment();
+                TutorialFragment tab1 = new TutorialFragment();
                 return tab1;
             case 1:
-                TutorialFragment tab2 = new TutorialFragment();
+                CourseFragment tab2 = new CourseFragment();
                 return tab2;
 
             default:
