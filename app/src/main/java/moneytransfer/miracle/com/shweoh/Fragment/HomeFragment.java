@@ -55,7 +55,7 @@ public class HomeFragment extends android.support.v4.app.Fragment {
 
             @Override
             public void onTabReselected(TabLayout.Tab tab) {
-
+                viewPager.setCurrentItem(tab.getPosition());
             }
         });
 
