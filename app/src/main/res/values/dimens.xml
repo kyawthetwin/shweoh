@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="header_height">200dip</dimen>
+    <dimen name="tabs_height">64dip</dimen>
+
+    <dimen name="header_scrollable_max_scroll">136dip</dimen>
+    <dimen name="header_title_height">64dip</dimen>
+    <dimen name="custom_over_scroll_height">96dip</dimen>
+
+
+    <dimen name="margin_small">8dp</dimen>
+    <dimen name="margin_medium">16dp</dimen>
+    <dimen name="margin_large">32dp</dimen>
+    <dimen name="padding_small">8dp</dimen>
+    <dimen name="padding_medium">16dp</dimen>
+    <dimen name="padding_large">32dp</dimen>
+    <dimen name="element_touch_width_small">32dp</dimen>
+    <dimen name="float_title_left_margin">44dp</dimen>
+    <dimen name="float_title_size">@dimen/abc_text_size_title_material_toolbar</dimen>
+    <dimen name="float_title_size_large">36sp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+</resources>

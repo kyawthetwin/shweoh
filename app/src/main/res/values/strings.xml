@@ -18,4 +18,7 @@
         <item>@string/nav_item_friends</item>
         <item>@string/nav_item_notifications</item>
     </string-array>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="about_instructor">    Hi, I\'m James. I have a degree in computing from Imperial College London, and a physics diploma from the Open University.I started working for myself at the age of 15, and never looked back. I explored careers as varied as being a commercial pilot, stunt-man, rock climbing instructor, and more. None of these provided a continued challenge, and stable income in the same way technology does.</string>
+    <string name="seeMore_aboutInstructor">After building and selling a home computer support business, I became an angel investor and business mentor here in Cambridge UK. I fell in love with teaching game development through one of my investments, and I now spend all of my time sharing my passion with people like you.</string>
 </resources>

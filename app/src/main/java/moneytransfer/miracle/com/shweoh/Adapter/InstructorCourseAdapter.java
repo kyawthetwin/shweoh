@@ -16,15 +16,15 @@ import moneytransfer.miracle.com.shweoh.Model.CourseItemModel;
 import moneytransfer.miracle.com.shweoh.R;
 
 /**
- * Created by user on 5/23/17.
+ * Created by user on 5/24/17.
  */
 
-public class CourseDataListAdapter extends RecyclerView.Adapter<CourseDataListAdapter.SingleItemRowHolder> {
+public class InstructorCourseAdapter extends RecyclerView.Adapter<InstructorCourseAdapter.SingleItemRowHolder> {
 
     private ArrayList<CourseItemModel> itemsList;
     private Context mContext;
 
-    public CourseDataListAdapter(Context context, ArrayList<CourseItemModel> itemsList) {
+    public InstructorCourseAdapter(Context context, ArrayList<CourseItemModel> itemsList) {
         this.itemsList = itemsList;
         this.mContext = context;
     }
@@ -39,9 +39,6 @@ public class CourseDataListAdapter extends RecyclerView.Adapter<CourseDataListAd
     @Override
     public void onBindViewHolder(SingleItemRowHolder holder, int i) {
 
-        CourseItemModel singleItem = itemsList.get(i);
-
-        holder.tvTitle.setText(singleItem.getName());
 
 
        /* Glide.with(mContext)
@@ -54,7 +51,7 @@ public class CourseDataListAdapter extends RecyclerView.Adapter<CourseDataListAd
 
     @Override
     public int getItemCount() {
-        return (null != itemsList ? itemsList.size() : 0);
+        return 7;
     }
 
     public class SingleItemRowHolder extends RecyclerView.ViewHolder {
@@ -80,7 +77,7 @@ public class CourseDataListAdapter extends RecyclerView.Adapter<CourseDataListAd
                     mContext.startActivity(intent);
 
 
-                   // Toast.makeText(v.getContext(), tvTitle.getText(), Toast.LENGTH_SHORT).show();
+                    // Toast.makeText(v.getContext(), tvTitle.getText(), Toast.LENGTH_SHORT).show();
 
                 }
             });
@@ -89,5 +86,6 @@ public class CourseDataListAdapter extends RecyclerView.Adapter<CourseDataListAd
         }
 
     }
-
 }
+
+
