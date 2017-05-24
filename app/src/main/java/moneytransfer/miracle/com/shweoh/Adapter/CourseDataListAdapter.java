@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
+import moneytransfer.miracle.com.shweoh.CourseDetail;
 import moneytransfer.miracle.com.shweoh.InstructorProfile;
 import moneytransfer.miracle.com.shweoh.Model.CourseItemModel;
 import moneytransfer.miracle.com.shweoh.R;
@@ -76,7 +77,7 @@ public class CourseDataListAdapter extends RecyclerView.Adapter<CourseDataListAd
                 public void onClick(View v) {
 
 
-                    Intent intent = new Intent(mContext, InstructorProfile.class);
+                    Intent intent = new Intent(mContext, CourseDetail.class);
                     mContext.startActivity(intent);
 
 

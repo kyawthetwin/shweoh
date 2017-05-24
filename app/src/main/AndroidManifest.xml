@@ -18,8 +18,10 @@
         </activity>
         <activity android:name=".MainActivity" />
         <activity android:name=".SplashScreen" />
-        <activity android:name=".InstructorProfile"
-            android:theme="@style/AppTheme"/>
+        <activity
+            android:name=".InstructorProfile"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".CourseDetail"></activity>
     </application>
 
 </manifest>

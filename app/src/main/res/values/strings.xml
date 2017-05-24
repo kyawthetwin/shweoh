@@ -24,4 +24,39 @@
     <string name="title_activity_main2">Main2Activity</string>
     <string name="about_instructor">    Hi, I\'m James. I have a degree in computing from Imperial College London, and a physics diploma from the Open University.I started working for myself at the age of 15, and never looked back. I explored careers as varied as being a commercial pilot, stunt-man, rock climbing instructor, and more. None of these provided a continued challenge, and stable income in the same way technology does.</string>
     <string name="seeMore_aboutInstructor">After building and selling a home computer support business, I became an angel investor and business mentor here in Cambridge UK. I fell in love with teaching game development through one of my investments, and I now spend all of my time sharing my passion with people like you.</string>
+    <string name="android_course">Create Professional Java Applications \n
+
+Create Greate Android Applications \n
+
+Apply for your dream job as an Android Developer \n
+
+Bring your own App Idea to Life \n
+
+Build a fantastic resume in order to show to employers \n
+
+Master Java Programming Language \n
+</string>
+
+    <string name="about_course">Basic Concepts of Programming \n
+
+Java Programming Basics \n
+
+Intermediate and Advanced Java Programming - Learn Java by Building Android Apps \n
+
+Intermediate Java Programming - Learn Java by Creating Android Apps! \n
+
+Advanced Java programing - Learn Java by Creating Android Apps! \n
+
+Android Programming \n
+
+Android Programming Basics \n
+
+Intermediate and Advanced Android Programming \n
+
+Firebase as Backend for Android Apps! \n
+
+Source Codes \n
+
+Create Complex Android Apps - Production Ready Apps! \n
+</string>
 </resources>

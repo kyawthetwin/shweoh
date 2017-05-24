@@ -15,50 +15,70 @@
   android:fitsSystemWindows="true">
 
 
-
-
-  <android.support.design.widget.CollapsingToolbarLayout
-      android:paddingTop="50dp"
-      android:paddingLeft="140dp"
-      android:id="@+id/collapse_toolbar"
-      android:layout_width="match_parent"
-      android:layout_height="match_parent"
-      app:layout_scrollFlags="scroll|exitUntilCollapsed"
-      android:background="@color/colorPrimary"
-      android:fitsSystemWindows="true">
-
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/MyToolbar"
+    <android.support.design.widget.CollapsingToolbarLayout
+        android:id="@+id/collapse_toolbar_instructor"
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        app:layout_collapseMode="parallax" />
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary"
+        android:fitsSystemWindows="true"
+        app:layout_scrollFlags="scroll|exitUntilCollapsed">
 
-    <com.mikhaellopez.circularimageview.CircularImageView
-        android:id="@+id/circularImageView"
-        android:layout_width="96dp"
-        android:layout_height="96dp"
-        android:src="@mipmap/mobileappposter" />
+      <android.support.v7.widget.Toolbar
+          android:id="@+id/toolbar_instructor"
+          android:layout_width="match_parent"
+          android:layout_height="?attr/actionBarSize"
+          app:layout_collapseMode="parallax" />
 
-  </android.support.design.widget.CollapsingToolbarLayout>
+      <com.mikhaellopez.circularimageview.CircularImageView
+          android:id="@+id/circularImageView"
+          android:layout_width="120dp"
+          android:layout_height="120dp"
+          android:layout_marginLeft="120dp"
+          android:layout_marginTop="50dp"
+          android:src="@mipmap/androidinstructor" />
 
 
+    </android.support.design.widget.CollapsingToolbarLayout>
 
-</android.support.design.widget.AppBarLayout>
+
+  </android.support.design.widget.AppBarLayout>
 
 
 
 <android.support.v4.widget.NestedScrollView
 android:layout_width="match_parent"
-android:layout_height="match_parent"
+android:layout_height="wrap_content"
 android:layout_gravity="fill_vertical"
-app:layout_behavior="@string/appbar_scrolling_view_behavior">
+app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:fillViewport="true">
 
 
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:paddingTop="24dp">
+    android:padding="24dp">
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Android Programming Instructor"
+      android:textColor="@android:color/white"/>
+
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Course : 7 courses"
+      android:textColor="@android:color/white"/>
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textColor="@android:color/white"
+      android:text="Leaners : 1243 leaners"/>
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Rating : 4.3"
+      android:textColor="@android:color/white"/>
 
 
   <RatingBar
@@ -90,7 +110,7 @@ app:layout_behavior="@string/appbar_scrolling_view_behavior">
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:layout_gravity="center_horizontal"
-      android:text="SEE MORE"
+      android:text="SHOW MORE"
       android:textColor="@color/colorPrimary" />
 
 
@@ -102,11 +122,39 @@ app:layout_behavior="@string/appbar_scrolling_view_behavior">
         android:visibility="gone"
         android:id="@+id/aboutInstructor" />
 
+    <TextView
+        android:id="@+id/showLess"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="SHOW LESS"
+        android:textColor="@color/colorPrimary"
+        android:visibility="gone"/>
+
 
 
 
 
   </LinearLayout>
+
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Contact Info"
+      android:textStyle="bold"
+      android:textSize="16dp"
+      android:textColor="@android:color/white"/>
+
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="phone num   :   0979XXXXX"
+      android:textColor="@android:color/white"/>
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="email address : instructor@gmail.com"
+      android:textColor="@android:color/white"/>
 
 
   <TextView

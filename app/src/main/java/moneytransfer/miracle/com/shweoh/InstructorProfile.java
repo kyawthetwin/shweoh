@@ -2,6 +2,7 @@ package moneytransfer.miracle.com.shweoh;
 
 import android.graphics.Color;
 import android.media.Rating;
+import android.provider.Settings;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -34,7 +35,7 @@ public class InstructorProfile extends AppCompatActivity {
     RecyclerView instructorCourseRecycler;
     InstructorCourseAdapter instructorCourseAdapter;
     ArrayList<CourseItemModel> courseItemModelArrayList;
-    TextView seeMore, aboutInstructor;
+    TextView seeMore, aboutInstructor, seeLess;
     RatingBar ratingBar;
 
     @Override
@@ -43,16 +44,25 @@ public class InstructorProfile extends AppCompatActivity {
         setContentView(R.layout.activity_instructor_profile);
 
 
-        final Toolbar toolbar = (Toolbar) findViewById(R.id.MyToolbar);
+        final Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_instructor);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+        toolbar.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
+
 
         CollapsingToolbarLayout collapsingToolbar =
-                (CollapsingToolbarLayout) findViewById(R.id.collapse_toolbar);
+                (CollapsingToolbarLayout) findViewById(R.id.collapse_toolbar_instructor);
         collapsingToolbar.setTitle("James");
 
 
         seeMore = (TextView) findViewById(R.id.seeMore);
+        seeLess = (TextView) findViewById(R.id.showLess);
         aboutInstructor = (TextView) findViewById(R.id.aboutInstructor);
         ratingBar = (RatingBar) findViewById(R.id.instructor_rating);
 
@@ -66,6 +76,16 @@ public class InstructorProfile extends AppCompatActivity {
             public void onClick(View v) {
                 aboutInstructor.setVisibility(View.VISIBLE);
                 seeMore.setVisibility(View.GONE);
+                seeLess.setVisibility(View.VISIBLE);
+            }
+        });
+
+        seeLess.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                aboutInstructor.setVisibility(View.GONE);
+                seeMore.setVisibility(View.VISIBLE);
+                seeLess.setVisibility(View.GONE);
             }
         });
 
