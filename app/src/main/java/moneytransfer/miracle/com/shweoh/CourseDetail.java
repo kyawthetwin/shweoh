@@ -1,6 +1,7 @@
 package moneytransfer.miracle.com.shweoh;
 
 import android.content.Intent;
+import android.content.res.ColorStateList;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -9,10 +10,14 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.mikhaellopez.circularimageview.CircularImageView;
+
 public class CourseDetail extends AppCompatActivity {
 
-    Button profileBtn;
+
     TextView showmore,showless,aboutCourse;
+
+    CircularImageView circularImageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,20 +37,25 @@ public class CourseDetail extends AppCompatActivity {
 
         CollapsingToolbarLayout collapsingToolbar =
                 (CollapsingToolbarLayout) findViewById(R.id.collapse_toolbar_course);
-        collapsingToolbar.setTitle("Android Development Course");
+        collapsingToolbar.setTitle(" ");
+        collapsingToolbar.setCollapsedTitleTextColor(getResources().getColor(android.R.color.white));
+        collapsingToolbar.setExpandedTitleTextColor(ColorStateList.valueOf(getResources().getColor(R.color.colorAccent)));
+        collapsingToolbar.setContentScrimColor(getResources().getColor(R.color.colorPrimary));
 
 
-        profileBtn = (Button) findViewById(R.id.profileButton);
+
+        circularImageView = (CircularImageView) findViewById(R.id.circular_image_instructor);
         showmore = (TextView) findViewById(R.id.seeMoreCourse);
         showless = (TextView) findViewById(R.id.showLessCourse);
         aboutCourse = (TextView) findViewById(R.id.aboutCourse);
-        profileBtn.setOnClickListener(new View.OnClickListener() {
+        circularImageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(getApplicationContext(),InstructorProfile.class);
                 startActivity(i);
             }
         });
+
 
         showmore.setOnClickListener(new View.OnClickListener() {
             @Override

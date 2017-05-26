@@ -38,6 +38,7 @@ public class InstructorProfile extends AppCompatActivity {
     TextView seeMore, aboutInstructor, seeLess;
     RatingBar ratingBar;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,12 +54,13 @@ public class InstructorProfile extends AppCompatActivity {
                 finish();
             }
         });
-        toolbar.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
+
 
 
         CollapsingToolbarLayout collapsingToolbar =
                 (CollapsingToolbarLayout) findViewById(R.id.collapse_toolbar_instructor);
         collapsingToolbar.setTitle("James");
+        collapsingToolbar.setContentScrimColor(getResources().getColor(R.color.colorPrimary));
 
 
         seeMore = (TextView) findViewById(R.id.seeMore);
