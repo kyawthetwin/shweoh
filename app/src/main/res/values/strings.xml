@@ -59,4 +59,6 @@ Source Codes \n
 
 Create Complex Android Apps - Production Ready Apps! \n
 </string>
+    <string name="error_player">There was an error initializing the YouTubePlayer</string>
+    <string name="player_error">Error</string>
 </resources>
