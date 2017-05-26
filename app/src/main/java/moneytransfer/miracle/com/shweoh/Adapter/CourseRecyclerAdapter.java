@@ -22,6 +22,18 @@ public class CourseRecyclerAdapter extends RecyclerView.Adapter<CourseRecyclerAd
 
     private ArrayList<CourseDataModel> dataList;
     private Context mContext;
+    CourseDataListAdapter itemListDataAdapter;
+    int [] itcourse = {R.drawable.android,R.drawable.ios1,R.drawable.web1,R.drawable.android3};
+    int [] businesscourse = {R.drawable.business1,R.drawable.business2,R.drawable.marketing,R.drawable.humanresources};
+    int [] languagecourse = {R.drawable.english1,R.drawable.japan,R.drawable.french1,R.drawable.spain1};
+    int [] designcourse = {R.drawable.photoshop1,R.drawable.illustrator1,R.drawable.max3d,R.drawable.animation2d};
+    int [] artscourse = {R.drawable.guitar1,R.drawable.painting,R.drawable.voilincourse,R.drawable.guitar1};
+
+    String [] stringIT = {"Android Development","iOS Development","Web Development","Android"};
+    String [] stringLang = {"English Speaking","Japanese Language","French Language","Spanish Language"};
+    String [] stringBusiness = {"Management","Business Development","Marketing","Human Resources"};
+    String [] stringDesign = {"PS for beginner","AI Advanced Course","3D Max","Animation with 2D"};
+    String [] stringArts = {"Guitar Lesson 1","painting for beginner","violin for kids","Guitar Lesson 2"};
 
     public CourseRecyclerAdapter(Context context, ArrayList<CourseDataModel> dataList) {
         this.dataList = dataList;
@@ -43,8 +55,21 @@ public class CourseRecyclerAdapter extends RecyclerView.Adapter<CourseRecyclerAd
         ArrayList singleSectionItems = dataList.get(i).getAllItemsInSection();
 
         itemRowHolder.itemTitle.setText(sectionName);
-
-        CourseDataListAdapter itemListDataAdapter = new CourseDataListAdapter(mContext, singleSectionItems);
+        if (i == 0) {
+             itemListDataAdapter = new CourseDataListAdapter(mContext, singleSectionItems, itcourse, stringIT);
+        }
+        else if (i == 1){
+            itemListDataAdapter = new CourseDataListAdapter(mContext, singleSectionItems, designcourse , stringDesign);
+        }
+        else if (i == 2){
+            itemListDataAdapter = new CourseDataListAdapter(mContext, singleSectionItems, businesscourse, stringBusiness);
+        }
+        else if (i == 3){
+            itemListDataAdapter = new CourseDataListAdapter(mContext, singleSectionItems, languagecourse, stringLang);
+        }
+        else if (i == 4){
+            itemListDataAdapter = new CourseDataListAdapter(mContext, singleSectionItems, artscourse , stringArts);
+        }
 
         itemRowHolder.recycler_view_list.setHasFixedSize(true);
         itemRowHolder.recycler_view_list.setLayoutManager(new LinearLayoutManager(mContext, LinearLayoutManager.HORIZONTAL, false));

@@ -24,10 +24,15 @@ public class CourseDataListAdapter extends RecyclerView.Adapter<CourseDataListAd
 
     private ArrayList<CourseItemModel> itemsList;
     private Context mContext;
+    private int []images;
+    private String [] courses;
 
-    public CourseDataListAdapter(Context context, ArrayList<CourseItemModel> itemsList) {
+    public CourseDataListAdapter(Context context, ArrayList<CourseItemModel> itemsList, int imges[], String course[])
+    {
         this.itemsList = itemsList;
         this.mContext = context;
+        this.images = imges;
+        this.courses = course;
     }
 
     @Override
@@ -42,7 +47,9 @@ public class CourseDataListAdapter extends RecyclerView.Adapter<CourseDataListAd
 
         CourseItemModel singleItem = itemsList.get(i);
 
-        holder.tvTitle.setText(singleItem.getName());
+        holder.tvTitle.setText(courses[i]);
+
+        holder.itemImage.setImageResource(images[i]);
 
 
        /* Glide.with(mContext)
@@ -68,8 +75,13 @@ public class CourseDataListAdapter extends RecyclerView.Adapter<CourseDataListAd
         public SingleItemRowHolder(View view) {
             super(view);
 
+
+            int position = getAdapterPosition();
+
             this.tvTitle = (TextView) view.findViewById(R.id.course_title);
             this.itemImage = (ImageView) view.findViewById(R.id.imageView_course);
+
+
 
 
             view.setOnClickListener(new View.OnClickListener() {

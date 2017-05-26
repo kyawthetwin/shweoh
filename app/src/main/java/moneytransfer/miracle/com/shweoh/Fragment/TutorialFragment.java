@@ -3,6 +3,8 @@ package moneytransfer.miracle.com.shweoh.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,6 +19,7 @@ import com.nightonke.boommenu.Piece.PiecePlaceEnum;
 
 import java.util.ArrayList;
 
+import moneytransfer.miracle.com.shweoh.Adapter.RecommendedAdapter;
 import moneytransfer.miracle.com.shweoh.R;
 
 /**
@@ -25,6 +28,8 @@ import moneytransfer.miracle.com.shweoh.R;
 
 public class TutorialFragment extends android.support.v4.app.Fragment {
     private BoomMenuButton bmb;
+    RecyclerView recommendedView, categoriesView;
+    RecommendedAdapter recommendedAdapter1, recommendedAdapter2;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
@@ -84,6 +89,21 @@ public class TutorialFragment extends android.support.v4.app.Fragment {
                 .normalImageRes(image)
                 .normalTextRes(name)
                 .normalColorRes(R.color.colorPrimary);
+    }
+
+    @Override
+    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        recommendedView = (RecyclerView) view.findViewById(R.id.recommended_rcv);
+        recommendedAdapter1 = new RecommendedAdapter(getActivity(),1);
+        recommendedView.setLayoutManager(new LinearLayoutManager(getActivity(),LinearLayoutManager.HORIZONTAL,false));
+        recommendedView.setAdapter(recommendedAdapter1);
+
+
+        categoriesView = (RecyclerView) view.findViewById(R.id.categories_rcv);
+        recommendedAdapter2 = new RecommendedAdapter(getActivity(),2);
+        categoriesView.setLayoutManager(new LinearLayoutManager(getActivity(),LinearLayoutManager.HORIZONTAL,false));
+        categoriesView.setAdapter(recommendedAdapter2);
     }
 
     @Override

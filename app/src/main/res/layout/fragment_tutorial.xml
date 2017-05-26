@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_margin="15sp"
         android:background="@drawable/rounded_search"
-        android:layout_height="40sp"></SearchView>
+        android:layout_height="40sp"/>
 
 
     <ScrollView
@@ -36,7 +36,7 @@
                     android:id="@+id/recommended_rcv"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:paddingTop="10sp"></android.support.v7.widget.RecyclerView>
+                    android:paddingTop="10sp"/>
             </LinearLayout>
 
             <LinearLayout
@@ -55,7 +55,7 @@
                     android:id="@+id/categories_rcv"
                     android:paddingTop="10sp"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
+                    android:layout_height="wrap_content"/>
             </LinearLayout>
         </LinearLayout>
     </ScrollView>

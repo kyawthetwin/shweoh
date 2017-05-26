@@ -58,14 +58,31 @@ public class CourseFragment extends android.support.v4.app.Fragment {
     }
 
     public void createDummyData() {
-        for (int i = 1; i <= 5; i++) {
+        for (int i = 0; i <= 4; i++) {
 
             CourseDataModel dm = new CourseDataModel();
 
-            dm.setHeaderTitle("Section " + i);
+            if (i == 0) {
 
+                dm.setHeaderTitle("Programming");
+            }
+            else if (i == 1) {
+
+                dm.setHeaderTitle("Design");
+            }
+            else if (i == 2) {
+
+                dm.setHeaderTitle("Business");
+            }
+            else if (i == 3){
+                dm.setHeaderTitle("Language");
+            }
+            else
+            {
+                dm.setHeaderTitle("Arts");
+            }
             ArrayList<CourseItemModel> singleItem = new ArrayList<CourseItemModel>();
-            for (int j = 0; j <= 5; j++) {
+            for (int j = 0; j <= 3; j++) {
                 singleItem.add(new CourseItemModel("Item " + j, "URL " + j));
             }
 
