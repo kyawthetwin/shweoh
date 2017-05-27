@@ -4,18 +4,27 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <SearchView
-        android:id="@+id/Search_View"
+
+    <!--<AdapterViewFlipper
+        android:id="@+id/viewflipper_video_turotrial"
         android:layout_width="match_parent"
-        android:layout_margin="15sp"
-        android:background="@drawable/rounded_search"
-        android:layout_height="40sp"/>
+        android:layout_height="200sp"
+        android:inAnimation="@anim/out_from_right"
+        android:outAnimation="@anim/out_from_left"/>-->
+
+    <ViewFlipper
+        android:id="@+id/simpleViewFlipper"
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+
+        </ViewFlipper>
+
 
 
     <ScrollView
+        android:layout_below="@id/simpleViewFlipper"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/Search_View">
+        android:layout_height="match_parent">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"

@@ -8,11 +8,13 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterViewFlipper;
 
 import java.util.ArrayList;
 
 import moneytransfer.miracle.com.shweoh.Adapter.CourseDataListAdapter;
 import moneytransfer.miracle.com.shweoh.Adapter.CourseRecyclerAdapter;
+import moneytransfer.miracle.com.shweoh.Adapter.FlipperAdapter;
 import moneytransfer.miracle.com.shweoh.Model.CourseDataModel;
 import moneytransfer.miracle.com.shweoh.Model.CourseItemModel;
 import moneytransfer.miracle.com.shweoh.R;
@@ -27,6 +29,7 @@ public class CourseFragment extends android.support.v4.app.Fragment {
     ArrayList<CourseDataModel> courseDataModelArrayList;
 
 
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
@@ -37,6 +40,9 @@ public class CourseFragment extends android.support.v4.app.Fragment {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
+
+
 
 
         courseDataModelArrayList = new ArrayList<CourseDataModel>();

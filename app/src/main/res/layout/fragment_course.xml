@@ -3,6 +3,13 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <SearchView
+        android:id="@+id/Search_View"
+        android:layout_width="match_parent"
+        android:layout_margin="15sp"
+        android:background="@drawable/rounded_search"
+        android:layout_height="40sp" />
+
     <android.support.v7.widget.RecyclerView
         android:id="@+id/course_category_recycler"
         android:layout_width="match_parent"

@@ -9,6 +9,11 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.AdapterViewFlipper;
+import android.widget.ImageView;
+import android.widget.ViewFlipper;
 
 import com.nightonke.boommenu.BoomButtons.ButtonPlaceEnum;
 import com.nightonke.boommenu.BoomButtons.HamButton;
@@ -19,6 +24,7 @@ import com.nightonke.boommenu.Piece.PiecePlaceEnum;
 
 import java.util.ArrayList;
 
+import moneytransfer.miracle.com.shweoh.Adapter.FlipperAdapter;
 import moneytransfer.miracle.com.shweoh.Adapter.RecommendedAdapter;
 import moneytransfer.miracle.com.shweoh.R;
 
@@ -30,6 +36,10 @@ public class TutorialFragment extends android.support.v4.app.Fragment {
     private BoomMenuButton bmb;
     RecyclerView recommendedView, categoriesView;
     RecommendedAdapter recommendedAdapter1, recommendedAdapter2;
+   // AdapterViewFlipper adapterViewFlipper;
+    ViewFlipper simpleViewFlipper;
+
+    int [] images = {R.drawable.android3,R.drawable.ios2,R.drawable.business2,R.drawable.english1,R.drawable.voilincourse};
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
@@ -104,6 +114,38 @@ public class TutorialFragment extends android.support.v4.app.Fragment {
         recommendedAdapter2 = new RecommendedAdapter(getActivity(),2);
         categoriesView.setLayoutManager(new LinearLayoutManager(getActivity(),LinearLayoutManager.HORIZONTAL,false));
         categoriesView.setAdapter(recommendedAdapter2);
+
+
+        simpleViewFlipper = (ViewFlipper) view.findViewById(R.id.simpleViewFlipper);
+
+        for (int i=0; i < images.length; i++) {
+
+            ImageView imageView = new ImageView(getActivity());
+            imageView.setImageResource(images[i]);
+            simpleViewFlipper.addView(imageView);
+
+
+        }
+
+
+        Animation in = AnimationUtils.loadAnimation(getActivity(), android.R.anim.slide_in_left);
+        Animation out = AnimationUtils.loadAnimation(getActivity(), android.R.anim.slide_out_right);
+        // set the animation type's to ViewFlipper
+        simpleViewFlipper.setInAnimation(in);
+        simpleViewFlipper.setOutAnimation(out);
+
+        ;
+        // set auto start for flipping between views
+        simpleViewFlipper.setAutoStart(true);
+        simpleViewFlipper.setFlipInterval(3000);
+        simpleViewFlipper.startFlipping();
+        /*adapterViewFlipper = (AdapterViewFlipper) view.findViewById(R.id.viewflipper_video_turotrial);
+        adapterViewFlipper.setAdapter(new FlipperAdapter(getActivity()));
+
+        adapterViewFlipper.setFlipInterval(3000);
+        adapterViewFlipper.setAutoStart(true);*/
+
+
     }
 
     @Override
