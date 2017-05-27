@@ -36,9 +36,10 @@ public class HomeFragment extends android.support.v4.app.Fragment {
         TabLayout tabLayout = (TabLayout) rootView.findViewById(R.id.tab_layout_main);
         tabLayout.addTab(tabLayout.newTab().setText("Tutorials"));
         tabLayout.addTab(tabLayout.newTab().setText("Courses"));
-        tabLayout.setSelectedTabIndicatorColor(getResources().getColor(R.color.colorPrimaryDark));
-        tabLayout.setDrawingCacheBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
-        tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
+        tabLayout.setTabTextColors(getResources().getColor(android.R.color.darker_gray),getResources().getColor(R.color.colorPrimaryDark));
+       // tabLayout.setSelectedTabIndicatorColor(getResources().getColor(R.color.colorPrimaryDark));
+        //tabLayout.setDrawingCacheBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+       // tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
         final ViewPager viewPager = (ViewPager) rootView.findViewById(R.id.mainPager);
         final MainPagerAdapter mainPagerAdapter = new MainPagerAdapter(getFragmentManager(), tabLayout.getTabCount());

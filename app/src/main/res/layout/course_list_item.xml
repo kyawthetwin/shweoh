@@ -2,8 +2,6 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-
-    android:background="?android:selectableItemBackground"
     android:orientation="vertical"
     android:padding="5dp">
 
@@ -23,19 +21,20 @@
             android:layout_gravity="center_vertical"
             android:layout_toLeftOf="@+id/txtMore"
             android:text="Sample title"
-            android:textColor="@android:color/black"
-            android:textSize="18sp" />
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="24sp"
+            android:textStyle="bold" />
         <TextView
             android:id="@+id/txtMore"
             android:layout_width="wrap_content"
             android:layout_height="42dp"
-            android:textSize="24sp"
+            android:textSize="16sp"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:gravity="center_vertical"
             android:layout_centerVertical="true"
-            android:text="MORE"
-            android:textColor="@color/colorPrimaryDark" />
+            android:text="more"
+            android:textColor="@android:color/black" />
 
 
     </RelativeLayout>
@@ -44,7 +43,7 @@
         android:id="@+id/course_recycler_view_list"
         android:layout_width="match_parent"
         android:layout_height="160dp"
-        android:layout_gravity="center_vertical"
+        android:layout_gravity="center"
         android:orientation="horizontal" />
 
 
