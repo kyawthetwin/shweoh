@@ -1,0 +1,58 @@
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+        <ImageView
+            android:id="@+id/i_image"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/frame"/>
+
+
+        <RelativeLayout
+            android:gravity="center"
+            android:layout_marginLeft="20sp"
+            android:paddingLeft="10sp"
+            android:layout_toRightOf="@+id/i_image"
+            android:layout_width="match_parent"
+            android:layout_height="150sp"
+            android:background="@drawable/rounded"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp">
+
+
+                <TextView
+                    android:textSize="25sp"
+                    android:id="@+id/i_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:text="@string/NAME" />
+
+
+
+
+                <TextView
+                    android:id="@+id/i_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:text="@string/title"
+                    android:layout_below="@id/i_name"/>
+
+            <TextView
+                    android:id="@+id/i_qualifictions"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:text="@string/Qualifications"
+                android:layout_below="@id/i_title"/>
+
+
+        </RelativeLayout>
+</RelativeLayout>
+

@@ -1,34 +1,19 @@
 package moneytransfer.miracle.com.shweoh;
 
-import android.graphics.Color;
-import android.media.Rating;
-import android.provider.Settings;
+import android.os.Bundle;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
-import android.text.Layout;
-import android.view.LayoutInflater;
-import android.view.Menu;
 import android.view.View;
-import android.widget.AbsListView;
-import android.widget.ArrayAdapter;
-import android.widget.ImageView;
-import android.widget.ListView;
 import android.widget.RatingBar;
-import android.widget.ScrollView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import moneytransfer.miracle.com.shweoh.Adapter.InstructorCourseAdapter;
-import moneytransfer.miracle.com.shweoh.Model.CourseDataModel;
 import moneytransfer.miracle.com.shweoh.Model.CourseItemModel;
-import ru.noties.scrollable.CanScrollVerticallyDelegate;
-import ru.noties.scrollable.ScrollableLayout;
 
 public class InstructorProfile extends AppCompatActivity {
 
@@ -59,7 +44,7 @@ public class InstructorProfile extends AppCompatActivity {
 
         CollapsingToolbarLayout collapsingToolbar =
                 (CollapsingToolbarLayout) findViewById(R.id.collapse_toolbar_instructor);
-        collapsingToolbar.setTitle("James");
+        collapsingToolbar.setTitle("  ");
         collapsingToolbar.setContentScrimColor(getResources().getColor(R.color.colorPrimary));
 
 

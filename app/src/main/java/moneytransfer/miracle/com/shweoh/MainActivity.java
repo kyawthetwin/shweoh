@@ -13,7 +13,7 @@ import android.view.View;
 import moneytransfer.miracle.com.shweoh.Fragment.FragmentDrawer;
 import moneytransfer.miracle.com.shweoh.Fragment.FriendsFragment;
 import moneytransfer.miracle.com.shweoh.Fragment.HomeFragment;
-import moneytransfer.miracle.com.shweoh.Fragment.MessagesFragment;
+import moneytransfer.miracle.com.shweoh.Fragment.InstructorlistFragment;
 
 public class MainActivity extends AppCompatActivity implements FragmentDrawer.FragmentDrawerListener  {
 
@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
                 title = getString(R.string.nav_item_friends);
                 break;
             case 2:
-                fragment = new MessagesFragment();
+                fragment = new InstructorlistFragment();
                 title = getString(R.string.nav_item_notifications);
                 break;
             default:
